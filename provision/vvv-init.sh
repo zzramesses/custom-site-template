@@ -33,6 +33,7 @@ if [ "${WP_TYPE}" != "none" ]; then
     noroot wp core config --dbname="${DB_NAME}" --dbuser=wp --dbpass=wp --quiet --extra-php <<PHP
 define( 'WP_DEBUG', true );
 define( 'SCRIPT_DEBUG', true );
+define( 'LOCAL_DEV', true );
 PHP
   fi
 
