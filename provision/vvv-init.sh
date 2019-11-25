@@ -32,6 +32,8 @@ if [ "${WP_TYPE}" != "none" ]; then
     echo "Configuring WordPress Stable..."
     noroot wp core config --dbname="${DB_NAME}" --dbuser=wp --dbpass=wp --quiet --extra-php <<PHP
 define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
 define( 'SCRIPT_DEBUG', true );
 define( 'LOCAL_DEV', true );
 PHP
